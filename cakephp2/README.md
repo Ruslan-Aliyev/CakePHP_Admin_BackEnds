@@ -18,7 +18,7 @@ class DATABASE_CONFIG {
 		'host' => 'localhost',
 		'login' => 'ruslan',
 		'password' => 'ruslan',
-		'database' => 'cakephp',
+		'database' => 'cakephp2',
 ```
 
 4. Empty all FILES in `tmp\cache\` for good measure. This can be done via plugins. Put `DebugKit` & `ClearCache` into `plugins/` folder and then in:
