@@ -4537,3 +4537,12 @@ Request URL: /cake_admin_be/cakephp2/admin/xxx
 Stack Trace:
 #0 C:\xampp\htdocs\cake_admin_be\cakephp2\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2020-09-23 17:07:59 Error: [MissingControllerException] Controller class AdsdgController could not be found.
+Exception Attributes: array (
+  'class' => 'AdsdgController',
+  'plugin' => NULL,
+)
+Request URL: /cake_admin_be/cakephp2/admin/adsdg
+Stack Trace:
+#0 C:\xampp\htdocs\cake_admin_be\cakephp2\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

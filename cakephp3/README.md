@@ -11,7 +11,7 @@ https://codingkala.blogspot.com/2018/05/cakephp-3-admin-panel-cakephp-admin.html
         'host' => 'localhost',
         'username' => 'ruslan',
         'password' => 'ruslan',
-        'database' => 'cakephp3b',
+        'database' => 'cakephp3',
 ```
 
 3. empty all FILES in `tmp\cache\` for good measure.

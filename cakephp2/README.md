@@ -18,7 +18,7 @@ class DATABASE_CONFIG {
 		'host' => 'localhost',
 		'login' => 'ruslan',
 		'password' => 'ruslan',
-		'database' => 'cakephp2',
+		'database' => 'cakephp',
 ```
 
 4. Empty all FILES in `tmp\cache\` for good measure. This can be done via plugins. Put `DebugKit` & `ClearCache` into `plugins/` folder and then in:
@@ -43,39 +43,39 @@ class AppController extends Controller {
 
 6. `app/Controller/AppController.php` : `AppController::beforeFilter`
 ```php
-	public function beforeFilter()
+public function beforeFilter()
+{
+	$params = $this->request->params;
+
+	if($this->request->plugin == "administration")
 	{
-		$params = $this->request->params;
-
-        if($this->request->plugin == "administration")
-        {
-            return;
-        }
-
-		if ( isset($params['prefix']) && ($params['prefix'] == "admin") ) 
-		{// If user try to access admin backend
-	        //if ( !($this->Session->check('Administrator.id') && $this->Session->check('Administrator.current')) ) 
-	        //{ // and if current user isnt admin, redirect to home 
-	        //	return $this->redirect('/');
-	        //}
-
-			//if( ($this->Session->check('Administrator.id') && $this->Session->check('Administrator.current')) ) 
-			//{ // and if current user is admin
-	  			return $this->redirect( Router::url( array( // redirect to admin plugin
-	                    'plugin'     => 'administration',
-	                    'controller' => 'administrations',
-	                    'action'     => 'index',
-	                    'admin'      => true,
-	                ), true));
-            //}
-
-	  		// For this check-if-is-admin, you also need to develop a module for users, then you can login as admin.
-
-	  		// Start by importing `administrators.sql` into `cakephp2` DB, then cake-bake MVC files from there.
-
-	  		// Better still, if current user isnt admin, you can redirect to admin/administration/administrations/login (not /index) . And then if user still dont login as admin, then redirect them to home.
-        }
+		return;
 	}
+
+	if ( isset($params['prefix']) && ($params['prefix'] == "admin") ) 
+	{// If user try to access admin backend
+		if ( !($this->Session->check('Administrator.id') && $this->Session->check('Administrator.current')) ) 
+		{ // and if current user isnt admin, redirect to home 
+			return $this->redirect('/');
+		}
+
+		if( ($this->Session->check('Administrator.id') && $this->Session->check('Administrator.current')) ) 
+		{ // and if current user is admin
+			return $this->redirect( Router::url( array( // redirect to admin plugin
+				'plugin'     => 'administration',
+				'controller' => 'administrations',
+				'action'     => 'index',
+				'admin'      => true,
+			), true));
+		}
+
+		// For this check-if-is-admin, you also need to develop a module for users, then you can login as admin.
+
+		// Start by importing `administrators.sql` into `cakephp2` DB, then cake-bake MVC files from there.
+
+		// Better still, if current user isnt admin, you can redirect to admin/administration/administrations/login (not /index) . And then if user still dont login as admin, then redirect them to home.
+	}
+}
 ```
 
 7. Import `administrations.sql` into `cakephp2` DB.
