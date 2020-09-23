@@ -1,0 +1,107 @@
+2020-09-23 11:58:44 Error: [MissingTableException] Table brw_users for model BrwUser was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'brw_users',
+  'class' => 'BrwUser',
+  'ds' => 'default',
+)
+Request URL: /cakephp2b/
+Stack Trace:
+#0 C:\xampp\htdocs\cakephp2b\lib\Cake\Model\Model.php(3686): Model->setSource('brw_users')
+#1 C:\xampp\htdocs\cakephp2b\lib\Cake\Model\Model.php(1394): Model->getDataSource()
+#2 C:\xampp\htdocs\cakephp2b\app\Plugin\Brownie\Model\Behavior\BrwPanelBehavior.php(267): Model->schema('sort')
+#3 C:\xampp\htdocs\cakephp2b\app\Plugin\Brownie\Model\Behavior\BrwPanelBehavior.php(235): BrwPanelBehavior->_sortableConfig(Object(AppModel))
+#4 C:\xampp\htdocs\cakephp2b\app\Plugin\Brownie\Model\Behavior\BrwPanelBehavior.php(105): BrwPanelBehavior->brwConfigInit(Object(AppModel))
+#5 C:\xampp\htdocs\cakephp2b\lib\Cake\Model\BehaviorCollection.php(145): BrwPanelBehavior->setup(Object(AppModel), Array)
+#6 C:\xampp\htdocs\cakephp2b\lib\Cake\Model\BehaviorCollection.php(66): BehaviorCollection->load('Brownie.BrwPane...', Array)
+#7 C:\xampp\htdocs\cakephp2b\lib\Cake\Model\Model.php(781): BehaviorCollection->init('BrwUser', Array)
+#8 C:\xampp\htdocs\cakephp2b\lib\Cake\Utility\ClassRegistry.php(186): Model->__construct(NULL)
+#9 C:\xampp\htdocs\cakephp2b\app\Plugin\Brownie\Controller\Component\BrwPanelComponent.php(17): ClassRegistry::init('BrwUser')
+#10 C:\xampp\htdocs\cakephp2b\lib\Cake\Utility\ObjectCollection.php(129): BrwPanelComponent->initialize(Object(PagesController))
+#11 C:\xampp\htdocs\cakephp2b\lib\Cake\Event\CakeEventManager.php(244): ObjectCollection->trigger('initialize')
+#12 C:\xampp\htdocs\cakephp2b\lib\Cake\Controller\Controller.php(682): CakeEventManager->dispatch(Object(CakeEvent))
+#13 C:\xampp\htdocs\cakephp2b\lib\Cake\Routing\Dispatcher.php(189): Controller->startupProcess()
+#14 C:\xampp\htdocs\cakephp2b\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#15 C:\xampp\htdocs\cakephp2b\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2020-09-23 11:59:03 Error: [MissingPluginException] Plugin Brownie could not be found.
+Exception Attributes: array (
+  'plugin' => 'Brownie',
+)
+Request URL: /cakephp2b/
+Stack Trace:
+#0 C:\xampp\htdocs\cakephp2b\lib\Cake\Core\App.php(227): CakePlugin::path('Brownie')
+#1 C:\xampp\htdocs\cakephp2b\lib\Cake\Core\App.php(549): App::path('Controller/Comp...', 'Brownie')
+#2 [internal function]: App::load('BrwPanelCompone...')
+#3 [internal function]: spl_autoload_call('BrwPanelCompone...')
+#4 C:\xampp\htdocs\cakephp2b\lib\Cake\Controller\ComponentCollection.php(110): class_exists('BrwPanelCompone...')
+#5 C:\xampp\htdocs\cakephp2b\lib\Cake\Controller\ComponentCollection.php(53): ComponentCollection->load('Brownie.BrwPane...', Array)
+#6 C:\xampp\htdocs\cakephp2b\lib\Cake\Controller\Controller.php(649): ComponentCollection->init(Object(PagesController))
+#7 C:\xampp\htdocs\cakephp2b\lib\Cake\Routing\Dispatcher.php(188): Controller->constructClasses()
+#8 C:\xampp\htdocs\cakephp2b\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#9 C:\xampp\htdocs\cakephp2b\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2020-09-23 12:00:01 Error: [MissingControllerException] Controller class Cakephp2bController could not be found.
+Exception Attributes: array (
+  'class' => 'Cakephp2bController',
+  'plugin' => NULL,
+)
+Request URL: /cakephp2b/cakephp2b/favicon.ico
+Stack Trace:
+#0 C:\xampp\htdocs\cakephp2b\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-09-23 12:17:41 Error: [NotFoundException] Model does not exists
+Request URL: /cakephp2b/admin/contents/index
+Stack Trace:
+#0 C:\xampp\htdocs\cakephp2b\lib\Cake\Event\CakeEventManager.php(244): ContentsController->beforeFilter(Object(CakeEvent))
+#1 C:\xampp\htdocs\cakephp2b\lib\Cake\Controller\Controller.php(682): CakeEventManager->dispatch(Object(CakeEvent))
+#2 C:\xampp\htdocs\cakephp2b\lib\Cake\Routing\Dispatcher.php(189): Controller->startupProcess()
+#3 C:\xampp\htdocs\cakephp2b\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ContentsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\cakephp2b\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2020-09-23 14:34:23 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [1049] Unknown database \'cakephp2b\'',
+  'enabled' => true,
+)
+Request URL: /cake_admin_be/cakephp2_plugin/
+Stack Trace:
+#0 C:\xampp\htdocs\cake_admin_be\cakephp2_plugin\lib\Cake\Model\Datasource\DboSource.php(278): Mysql->connect()
+#1 C:\xampp\htdocs\cake_admin_be\cakephp2_plugin\lib\Cake\Model\ConnectionManager.php(105): DboSource->__construct(Array)
+#2 C:\xampp\htdocs\cake_admin_be\cakephp2_plugin\lib\Cake\Model\Model.php(3659): ConnectionManager::getDataSource('default')
+#3 C:\xampp\htdocs\cake_admin_be\cakephp2_plugin\lib\Cake\Model\Model.php(1162): Model->setDataSource('default')
+#4 C:\xampp\htdocs\cake_admin_be\cakephp2_plugin\lib\Cake\Model\Model.php(3686): Model->setSource('brw_users')
+#5 C:\xampp\htdocs\cake_admin_be\cakephp2_plugin\lib\Cake\Model\Model.php(1394): Model->getDataSource()
+#6 C:\xampp\htdocs\cake_admin_be\cakephp2_plugin\app\Plugin\Brownie\Model\Behavior\BrwPanelBehavior.php(267): Model->schema('sort')
+#7 C:\xampp\htdocs\cake_admin_be\cakephp2_plugin\app\Plugin\Brownie\Model\Behavior\BrwPanelBehavior.php(235): BrwPanelBehavior->_sortableConfig(Object(AppModel))
+#8 C:\xampp\htdocs\cake_admin_be\cakephp2_plugin\app\Plugin\Brownie\Model\Behavior\BrwPanelBehavior.php(105): BrwPanelBehavior->brwConfigInit(Object(AppModel))
+#9 C:\xampp\htdocs\cake_admin_be\cakephp2_plugin\lib\Cake\Model\BehaviorCollection.php(145): BrwPanelBehavior->setup(Object(AppModel), Array)
+#10 C:\xampp\htdocs\cake_admin_be\cakephp2_plugin\lib\Cake\Model\BehaviorCollection.php(66): BehaviorCollection->load('Brownie.BrwPane...', Array)
+#11 C:\xampp\htdocs\cake_admin_be\cakephp2_plugin\lib\Cake\Model\Model.php(781): BehaviorCollection->init('BrwUser', Array)
+#12 C:\xampp\htdocs\cake_admin_be\cakephp2_plugin\lib\Cake\Utility\ClassRegistry.php(186): Model->__construct(NULL)
+#13 C:\xampp\htdocs\cake_admin_be\cakephp2_plugin\app\Plugin\Brownie\Controller\Component\BrwPanelComponent.php(17): ClassRegistry::init('BrwUser')
+#14 C:\xampp\htdocs\cake_admin_be\cakephp2_plugin\lib\Cake\Utility\ObjectCollection.php(129): BrwPanelComponent->initialize(Object(PagesController))
+#15 C:\xampp\htdocs\cake_admin_be\cakephp2_plugin\lib\Cake\Event\CakeEventManager.php(244): ObjectCollection->trigger('initialize')
+#16 C:\xampp\htdocs\cake_admin_be\cakephp2_plugin\lib\Cake\Controller\Controller.php(682): CakeEventManager->dispatch(Object(CakeEvent))
+#17 C:\xampp\htdocs\cake_admin_be\cakephp2_plugin\lib\Cake\Routing\Dispatcher.php(189): Controller->startupProcess()
+#18 C:\xampp\htdocs\cake_admin_be\cakephp2_plugin\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#19 C:\xampp\htdocs\cake_admin_be\cakephp2_plugin\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#20 {main}
+2020-09-23 14:34:52 Error: [MissingControllerException] Controller class CakeAdminBeController could not be found.
+Exception Attributes: array (
+  'class' => 'CakeAdminBeController',
+  'plugin' => NULL,
+)
+Request URL: /cake_admin_be/cakephp2_plugin/cake_admin_be/cakephp2_plugin/favicon.ico
+Stack Trace:
+#0 C:\xampp\htdocs\cake_admin_be\cakephp2_plugin\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-09-23 14:35:19 Error: [NotFoundException] Model does not exists
+Request URL: /cake_admin_be/cakephp2_plugin/admin/contents/index
+Stack Trace:
+#0 C:\xampp\htdocs\cake_admin_be\cakephp2_plugin\lib\Cake\Event\CakeEventManager.php(244): ContentsController->beforeFilter(Object(CakeEvent))
+#1 C:\xampp\htdocs\cake_admin_be\cakephp2_plugin\lib\Cake\Controller\Controller.php(682): CakeEventManager->dispatch(Object(CakeEvent))
+#2 C:\xampp\htdocs\cake_admin_be\cakephp2_plugin\lib\Cake\Routing\Dispatcher.php(189): Controller->startupProcess()
+#3 C:\xampp\htdocs\cake_admin_be\cakephp2_plugin\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ContentsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\cake_admin_be\cakephp2_plugin\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
